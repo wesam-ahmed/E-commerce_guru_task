@@ -54,11 +54,14 @@ public void testDay1TestCase1() throws Exception  {
     String png = ("E:\\projects\\E-commerce_gurutask\\Mobile Products are sorted" + scc + ".png");
     FileUtils.copyFile(scrFile, new File(png));
 }
+
     @AfterTest
     public void tearDown() throws Exception {
         driver.quit();
 
     }
+
+
 
 
 }

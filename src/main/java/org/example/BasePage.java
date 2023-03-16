@@ -21,6 +21,21 @@ public class BasePage {
     By Emptycart = By.id("empty_cart_button");
     By CarTisEmpty = By.xpath("//div[@class='page-title']");
 
+    By AddtoCompareIphone = By.xpath("/html/body/div/div/div[2]/div/div[2]/div[1]/div[3]/ul/li[3]/div/div[3]/ul/li[2]/a");
+    By mainMobileIphone = By.xpath("//h2/a[@title='IPhone']");
+    By AddtoCompareSonyXperiae = By.xpath("/html/body/div/div/div[2]/div/div[2]/div[1]/div[3]/ul/li[2]/div/div[3]/ul/li[2]/a");
+
+    By mainMobileSonyXperiae = By.xpath("//h2/a[@title='Sony Xperia']");
+    By CompareBtn=By.xpath("//button[@title='Compare']");
+    By compHead=By.xpath("//*[@id='top']/body/div[1]/div[1]/h1");
+    By popupMobileIphone = By.xpath("//h2/a[@title='IPhone']");
+    By popupMobileSonyXperiae = By.xpath("//h2/a[@title='Sony Xperia']");
+    By CloseCompareWindow=By.xpath("//button[@title='Close Window']");
+
+
+
+
+
     public BasePage(WebDriver driver) {
         this.driver = driver;
     }
@@ -79,6 +94,48 @@ public class BasePage {
         timeTofindElement(CarTisEmpty);
         return driver.findElement(CarTisEmpty).getText();
     }
+    public void clickAddtoCompareSonyXperiae() {
+        timeTofindElement(AddtoCompareSonyXperiae);
+        driver.findElement(AddtoCompareSonyXperiae).click();
+    }
+    public String getmainMobileSonyXperiae() {
+        timeTofindElement( mainMobileSonyXperiae);
+        return driver.findElement( mainMobileSonyXperiae).getText();
+    }
+
+
+    public void clickAddtoCompareIphone() {
+        timeTofindElement(AddtoCompareIphone);
+        driver.findElement(AddtoCompareIphone).click();
+    }
+    public String getmainMobileIphone() {
+        timeTofindElement(mainMobileIphone);
+        return driver.findElement(mainMobileIphone).getText();
+    }
+    public void clickCompareBtn() {
+        timeTofindElement(CompareBtn);
+        driver.findElement(CompareBtn).click();
+    }
+    public String getcompHead() {
+        timeTofindElement(compHead);
+        return driver.findElement(compHead).getText();
+    }
+    public String getpopupMobileIphone() {
+        timeTofindElement(popupMobileIphone);
+        return driver.findElement(popupMobileIphone).getText();
+    }
+    public String getpopupMobileSonyXperiae() {
+        timeTofindElement(popupMobileSonyXperiae);
+        return driver.findElement(popupMobileSonyXperiae).getText();
+    }
+    public void CloseCompareWindow() {
+        timeTofindElement(CloseCompareWindow);
+        driver.findElement(CloseCompareWindow).click();
+    }
+
+
+
+
 }
 
 
